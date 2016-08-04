@@ -6,6 +6,7 @@
   margin: 0 auto;
   width: 800px;
   overflow: auto;
+  text-align: right;
 }
 
 .backgroundImage {
@@ -14,16 +15,26 @@
 
 /* main social media navbar styling */
 .mediaBar {
-  display: inline;
+  display: inline-block;
   width: 50%;
   float: right;
-  text-align: right;
+  margin-left: 50%;
+}
+.img--size {
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+  margin: auto;
+  clear: right;
+  text-align: center;
+
 }
 /*
 facebook color: 68	88	151
 rss color: 204	143	50
 twitter color: 106	141	199
 youtube color: 178	56	45
+red for buttons: 180	41	46
 */
 .socialMedia {
   display: inline-block;
@@ -31,11 +42,11 @@ youtube color: 178	56	45
   width: 60px;
   margin: 0px,10px;
   vertical-align: top;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.4);
 }
 
 .facebook {
   background-color: rgb(68, 88, 151);
-  border-bottom: 4px, solid, rgb(255, 255, 255, .5);
 }
 .rss {
   background-color: rgb(204, 143, 50);
@@ -45,4 +56,15 @@ youtube color: 178	56	45
 }
 .youtube {
   background-color: rgb(178, 56, 45);
+}
+/* main navbar*/
+.menuBar {
+  display: inline;
+}
+.menuBar--button {
+  text-transform: uppercase;
+  background-color: rgb(180, 88, 151);
+  text-decoration: none;
+  width: 100%;
+
 }
