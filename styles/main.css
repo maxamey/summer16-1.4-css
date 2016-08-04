@@ -6,8 +6,12 @@
   background-image: url("../assets/bg.jpg")
 }
 
-/* main social media nav styling */
-
+/* main social media navbar styling */
+.mediaBar {
+  display: inline;
+  float: right;
+  width: 50%;
+}
 /*
 facebook color: 68	88	151
 rss color: 204	143	50
@@ -19,15 +23,19 @@ youtube color: 178	56	45
   height: 60px;
   width: 60px;
   border-bottom: 4px, solid, rgb(255, 255, 255, .5);
-  padding: 11px
-  margin: 10px
+  margin: 0px,10px;
+  vertical-align: top;
 }
 
 .facebook {
-  background-color: rgb(68, 88, 151)
+  background-color: rgb(68, 88, 151);
 }
-.mediaBar {
-  display: inline-block;
-  float: right;
-  width: 50%;
+.rss {
+  background-color: rgb(204, 143, 50);
+}
+.twitter {
+  background-color: rgb(106, 141, 199);
+}
+.youtube {
+  background-color: rgb(178, 56, 45);
 }
