@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+.mainDiv--centered {
+  margin: 0 auto;
+  width: 800px;
+  overflow: auto;
+}
+
 .backgroundImage {
   background-image: url("../assets/bg.jpg")
 }
@@ -9,8 +15,9 @@
 /* main social media navbar styling */
 .mediaBar {
   display: inline;
-  float: right;
   width: 50%;
+  float: right;
+  text-align: right;
 }
 /*
 facebook color: 68	88	151
@@ -22,13 +29,13 @@ youtube color: 178	56	45
   display: inline-block;
   height: 60px;
   width: 60px;
-  border-bottom: 4px, solid, rgb(255, 255, 255, .5);
   margin: 0px,10px;
   vertical-align: top;
 }
 
 .facebook {
   background-color: rgb(68, 88, 151);
+  border-bottom: 4px, solid, rgb(255, 255, 255, .5);
 }
 .rss {
   background-color: rgb(204, 143, 50);
