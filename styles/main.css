@@ -131,3 +131,42 @@ red for buttons: 180	41	46
 	width: 6px;
 	height: 6px;
 }
+
+.carousel__buttons--link {
+
+}
+
+/* article grid*/
+.grid__row {
+
+}
+
+.grid__column {
+
+}
+
+.article {
+  display: inline-block;
+
+}
+
+.article__title {
+
+}
+
+.article__preview {
+  
+}
+
+/* bio grid with pictures*/
+.bio__grid {
+
+}
+
+.bio__grid--link {
+
+}
+
+.bio__grid--photo {
+
+}
