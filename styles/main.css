@@ -94,14 +94,40 @@ red for buttons: 180	41	46
   width: 100%;
   height: 360px;
   background-image: url("../assets/top-image.png");
+  /* "Tip: Always set a background-color to be used if the image is unavailable."
+  http://www.w3schools.com/cssref/pr_background-image.asp
+  */
+  background-color: rgb(168, 167, 166);
   /*
   http://www.w3schools.com/cssref/pr_background-position.asp
     	The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you only specify one value, the other value will be 50%. You can mix % and positions
   */
   background-position: 50% 20%;
-  border: 10px solid rgb(251, 251, 251)
+  border: 10px solid rgb(251, 251, 251);
+  box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+}
+/*buttons container*/
+.carousel__buttons {
+  display: inline-block;
+  margin: 22px 480px;
+
 }
 
-.carousel__buttons {
+.carousel__buttons--circle {
+  display: inline-block;
+  background-color: rgb(227, 227, 227);
+  border-radius: 50%;
+	width: 16px;
+	height: 16px;
+  box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.5);
+}
 
+.innerDot {
+  /* WARNING: didnt really know how to position this*/
+  position: relative;
+  display: inline-block;
+  background-color: rgb(180, 41, 46);
+  border-radius: 50%;
+	width: 6px;
+	height: 6px;
 }
