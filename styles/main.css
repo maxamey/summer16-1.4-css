@@ -9,15 +9,12 @@
 .mainDiv--centered {
   margin: 0 auto;
   width: 1024px;
-  overflow: auto;
-  text-align: right;
 }
 
 /* main social media navbar styling */
 .mediaBar {
   display: inline-block;
   width: 50%;
-  float: right;
   margin-left: 50%;
 }
 
@@ -62,17 +59,19 @@ red for buttons: 180	41	46
 
 /* main navbar*/
 .menuBar {
-  display: inline;
+  display: inline-block;
   margin: 16px, 0px;
   width: 100%;
   height: 77px;
   text-align: center;
+  margin-top: 16px;
 }
 /*main navbar buttons*/
 .menuBar--button {
-  font-family: Gotham, sans-serif;
+  display: inline-block;
+  font-family: Gill Sans, sans-serif;
   color: white;
-  text-align: center;
+  text-align: justify;
   text-transform: uppercase;
   background-color: rgb(180, 41, 46);
   text-decoration: none;
@@ -81,6 +80,7 @@ red for buttons: 180	41	46
   padding: 14px;
   clear: right;
   vertical-align: center;
+
   /*
   found this at http://www.w3schools.com/cssref/css3_pr_box-shadow.asp
   adding a border with opacity showed the color of it's own element instead of being translucent to the background image
@@ -102,15 +102,29 @@ red for buttons: 180	41	46
   http://www.w3schools.com/cssref/pr_background-position.asp
     	The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you only specify one value, the other value will be 50%. You can mix % and positions
   */
-  background-position: 50% 20%;
+  background-position: 35% 20%;
   border: 10px solid rgb(251, 251, 251);
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+  padding-right: 547px;
+  padding-top: 50px;
 }
+
+.logo{
+  width: 400px;
+  height: 240px;
+}
+
 /*buttons container*/
 .carousel__buttons {
   display: inline-block;
   margin: 22px 480px;
+  vertical-align: top;
+  text-decoration: none;
 
+}
+
+.carousel__buttons--link {
+  text-decoration: none;
 }
 
 .carousel__buttons--circle {
@@ -120,6 +134,7 @@ red for buttons: 180	41	46
 	width: 16px;
 	height: 16px;
   box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 
 .innerDot {
@@ -147,6 +162,11 @@ red for buttons: 180	41	46
 
 .article {
   display: inline-block;
+  background-color: rgb(252, 252, 252);
+  width: 33.3%;
+  font-family: Futura, sans-serif;
+  box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+  vertical-align: top;
 
 }
 
@@ -155,18 +175,82 @@ red for buttons: 180	41	46
 }
 
 .article__preview {
-  
+
+}
+
+.readMore {
+  color: rgb(180, 141, 46)
+  text-decoration: none;
 }
 
 /* bio grid with pictures*/
-.bio__grid {
+.bios {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+.bios__link {
+  text-decoration: none;
+}
+
+.bios__container {
+  display: inline-block;
+  width: 100%;
+}
+
+.bios__img {
 
 }
 
-.bio__grid--link {
-
+.lance {
+  background-image: url("../assets/sk8r-4.png");
+  width: 334px;
+  height: 232px;
+  border: 5px solid rgb(227, 227, 227);
 }
 
-.bio__grid--photo {
+.rodney {
+  background-image: url("../assets/sk8r-3.png");
+  width: 334px;
+  height: 232px;
+  border: 5px solid rgb(227, 227, 227);
+  margin-right: 10px;
+}
+
+.tommy {
+  display: inline;
+  background-image: url("../assets/sk8r-4.png");
+  width: 334px;
+  height: 232px;
+  border: 5px solid rgb(227, 227, 227);
+}
+
+.steve {
+  background-image: url("../assets/sk8r-4.png");
+  width: 678px;
+  height: 232px;
+  border: 5px solid rgb(227, 227, 227);
+}
+
+.boards {
+  display: inline-block;
+  width: 100%;
+  height: 295px;
+  background-color: rgb(252, 252, 252);
+  padding: 22px;
+  box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+}
+
+.boards__images {
+  display: inline-block;
+  text-align: justify;
+  margin: 0px, 20px;
+}
+
+.leftmost {
+  margin-left:
+}
+
+.rightmost {
 
 }
