@@ -284,9 +284,84 @@ red for buttons: 180	41	46
   margin-right: 0;
 }
 
+/* Footer begins here */
+
 .footer__container {
   width: 100%;
   height: 362px;
   background-color: rgb(252,252, 252);
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+  margin-top: 34px;
+  padding-top: 34px;
+  padding-left: 38px;
+  padding-right: 29px;
+}
+
+.contactUs__container {
+  position: relative;
+  width: 485px;
+  height: 282px;
+}
+
+/* navbar container for socail media in the footer */
+.mediaBar__footer {
+  margin-top: 31px;
+}
+/* Styling for the *footer* social media icon images */
+
+.socialMedia__Footer {
+  display: inline-block;
+  height: 31px;
+  width: 30px;
+  margin: 0px,10px;
+  vertical-align: top;
+  box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+}
+
+.img--sizeFooter {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  opacity: 0.2;
+  margin-top: 9px;
+  text-align: left;
+}
+
+.facebookFooter--icon {
+  width: 31px;
+  height: 30px;
+  margin: 0px;
+}
+
+.facebookFooter {
+  background-color: rgb(79,	79,	79)	;
+}
+
+.rssFooter {
+  background-color: rgb(174,	174, 174);
+}
+
+.twitterFooter {
+  background-color: rgb(122,	122,	122);
+}
+
+.youtubeFooter {
+  background-color: rgb(116,	116,	116);
+}
+
+/*  Forms styling here*/
+
+.forms__container {
+  display: inline-block;
+  width: 434px;
+
+}
+
+.inputs__box {
+  width: 100%;
+  height: 43px;
+}
+
+.emailBox {
+  height: 108px;
 }
