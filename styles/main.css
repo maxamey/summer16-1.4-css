@@ -12,7 +12,8 @@ a {
 .backgroundImage {
   background-image: url("../assets/bg.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images ---- MUCH better than 100% as value */
+  background-size: cover;
 }
 
 .mainDiv--centered {
