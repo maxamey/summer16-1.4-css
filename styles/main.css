@@ -7,6 +7,7 @@
 a {
   text-decoration: none;
 }
+/* The remnants of an attempt to make a shape
 
 .rectanglePart {
   display: inline-block;
@@ -15,6 +16,7 @@ a {
   height: 80px;
   background: blue;
 }
+*/
 
 
 .backgroundImage {
@@ -135,7 +137,7 @@ red for buttons: 180	41	46
 /* main navbar*/
 .menuBar {
   display: inline-block;
-
+  position: relative;
   margin-top: 86px;
   width: 100%;
   height: 77px;
@@ -143,7 +145,6 @@ red for buttons: 180	41	46
 }
 /*main navbar buttons*/
 .menuBar--button {
-  position: relative;
   display: inline-block;
   color: white;
   text-transform: uppercase;
@@ -151,9 +152,10 @@ red for buttons: 180	41	46
   width: 248px;
   height: 40px;
   padding: 14px;
-  clear: right;
   vertical-align: center;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 
 
   /*
@@ -247,19 +249,25 @@ red for buttons: 180	41	46
 }
 
 .article {
+  position: relative;
   display: inline-block;
   background-color: rgb(252, 252, 252);
   width: 33%;
   height: 350px;
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
   vertical-align: top;
+  padding: 22px;
 
 }
 
 .article__title {
+  font-weight: 400;
   position:relative;
-  margin-bottom: 22px;
 
+}
+
+.timestamp {
+  color: rgb(173, 173, 173);
 }
 
 .article__preview {
@@ -267,7 +275,9 @@ red for buttons: 180	41	46
 }
 
 .readMore {
-  color: rgb(180, 141, 46)
+  color: rgb(180, 41, 46);
+  position: absolute;
+  left: auto;
 }
 
 /* bio grid with pictures*/
@@ -278,6 +288,7 @@ red for buttons: 180	41	46
 
 .bios__link {
   position: relative;
+  text-align: center;
 }
 
 .bios__container {
@@ -286,8 +297,20 @@ red for buttons: 180	41	46
   width: 100%;
 }
 
+h3 {
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+}
+
 .lance {
   background-image: url("../assets/sk8er-4.png");
+  background-position: 70% 20%;
   width: 334px;
   height: 232px;
   border: 5px solid rgb(227, 227, 227);
@@ -295,7 +318,7 @@ red for buttons: 180	41	46
 
 .rodney {
   background-image: url("../assets/sk8er-3.png");
-  width: 334px;
+  width: 339px;
   height: 232px;
   border: 5px solid rgb(227, 227, 227);
   margin-right: 10px;
@@ -304,6 +327,7 @@ red for buttons: 180	41	46
 .tommy {
   float: right;
   background-image: url("../assets/sk8er-2.png");
+  background-position: 78%;
   width: 336px;
   height: 474px;
   border: 5px solid rgb(227, 227, 227);
@@ -311,8 +335,9 @@ red for buttons: 180	41	46
 
 .steve {
   background-image: url("../assets/sk8er-1.png");
+  background-position: center;
   width: 678px;
-  height: 232px;
+  height: 237px;
   border: 5px solid rgb(227, 227, 227);
 }
 
@@ -331,6 +356,8 @@ red for buttons: 180	41	46
   background-color: rgb(252, 252, 252);
   padding: 20px;
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+  margin-top: 30px;
+  padding-left: 45px;
 
 }
 
