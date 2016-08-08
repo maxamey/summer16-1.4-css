@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Gill Sans, sans-serif;
+  font-weight: lighter;
 }
 
 a {
@@ -17,6 +18,8 @@ a {
 .mainDiv--centered {
   margin: 0 auto;
   width: 1024px;
+  padding-bottom: 36px;
+
 }
 
 /* main social media navbar styling */
@@ -150,6 +153,7 @@ red for buttons: 180	41	46
 }
 
 .carousel__buttons--link {
+
 }
 
 .carousel__buttons--circle {
@@ -162,7 +166,7 @@ red for buttons: 180	41	46
 }
 
 .innerDot {
-  /* WARNING: didnt really know how to position this*/
+  /* WARNING: didn't really know how to position this*/
   position: relative;
   display: inline-block;
   background-color: rgb(180, 41, 46);
@@ -295,12 +299,15 @@ red for buttons: 180	41	46
   padding-top: 34px;
   padding-left: 38px;
   padding-right: 29px;
+  margin-bottom: 36px;
 }
 
 .contactUs__container {
+  display: inline-block;
   position: relative;
-  width: 485px;
+  width: 450px;
   height: 282px;
+  vertical-align: top;
 }
 
 /* navbar container for socail media in the footer */
@@ -323,7 +330,8 @@ red for buttons: 180	41	46
   width: 15px;
   height: 15px;
   opacity: 0.2;
-  margin-top: 9px;
+  margin-top: 7px;
+  margin-left: 8px;
   text-align: left;
 }
 
@@ -352,16 +360,55 @@ red for buttons: 180	41	46
 /*  Forms styling here*/
 
 .forms__container {
+  position: relative;
   display: inline-block;
   width: 434px;
+  float: right;
+}
 
+.contactUs__heading {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .inputs__box {
   width: 100%;
   height: 43px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgb(175, 175, 175);
+  padding: 11px;
+  /* Tried using border-style: inset, but couldnt get it to work correctly */
+  border-top: 4px solid rgb(175, 175, 175);
+  border-left: 4px solid rgb(175, 175, 175);
+  border-right: 1px solid rgb(175, 175, 175);
+  border-bottom: 1px solid rgb(175, 175, 175);
+}
+
+.nameBox {
+  margin-bottom: 17px;
 }
 
 .emailBox {
+  margin-bottom: 17px;
+}
+
+.textInput {
   height: 108px;
+  margin-bottom: 29px;
+  resize: none;
+}
+
+.submit {
+  width: 248px;
+  height: 40px;
+  font-family: Gill Sans, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgb(252, 252, 252);
+  background-color: rgb(180, 41, 46);
+  border:0 none;
+  border-radius: 0px;
+  float: right;
 }
