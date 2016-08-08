@@ -8,6 +8,14 @@ a {
   text-decoration: none;
 }
 
+.rectanglePart {
+  display: inline-block;
+  position: absolute;
+  width: 140px;
+  height: 80px;
+  background: blue;
+}
+
 
 .backgroundImage {
   background-image: url("../assets/bg.jpg");
@@ -16,6 +24,7 @@ a {
   background-size: cover;
 }
 
+
 .mainDiv--centered {
   margin: 0 auto;
   width: 1024px;
@@ -23,12 +32,58 @@ a {
 
 }
 
+/* subscribe link */
+.subscribe {
+  display: inline-block;
+  margin-left: 56%;
+  vertical-align: top;
+}
+
+.subscribe__link {
+  position: relative;
+  display: inline-block;
+  color: rgb(252, 252, 252);
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.subscribe__dot--1 {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(252, 252, 252);
+  border-radius: 50%;
+	width: 4px;
+	height: 4px;
+  vertical-align: top;
+  margin-top: 27px;
+}
+
+.dots__stack--container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 96px;
+}
+
+/* Tried to use a flex bos to space out but dont fully understand how to use it yet. */
+.dots__stack {
+  position: relative;
+  display: flex;
+  background-color: rgb(252, 252, 252);
+  border-radius: 50%;
+	width: 4px;
+	height: 4px;
+  margin-bottom: 3px;
+}
+
+.dots__stack:nth-child(1) {
+  margin-top: 13px;
+}
+
 /* main social media navbar styling */
 .mediaBar {
   position: relative;
   display: inline-block;
-  width: 50%;
-  margin-left: 50%;
 }
 
 /*
@@ -80,6 +135,7 @@ red for buttons: 180	41	46
 /* main navbar*/
 .menuBar {
   display: inline-block;
+
   margin-top: 86px;
   width: 100%;
   height: 77px;
@@ -98,6 +154,7 @@ red for buttons: 180	41	46
   clear: right;
   vertical-align: center;
   margin-top: 20px;
+
 
   /*
   found this at http://www.w3schools.com/cssref/css3_pr_box-shadow.asp
