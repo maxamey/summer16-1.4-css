@@ -99,6 +99,7 @@ twitter color: 106	141	199
 youtube color: 178	56	45
 red for buttons: 180	41	46
 */
+
 .socialMedia {
   position: relative;
   display: inline-block;
@@ -107,10 +108,16 @@ red for buttons: 180	41	46
   margin: 0px 0.2%;
   vertical-align: top;
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+  transition: box-shadow .6s;
 }
 
 .socialMedia:nth-child(2,3) {
   margin: 0 0.2%
+}
+
+.socialMedia:hover {
+  box-shadow: 0px 4px 0px rgb(181, 46, 41);
+  transition: box-shadow .6s;
 }
 
 /*styling for the social media icon images*/
@@ -136,6 +143,7 @@ red for buttons: 180	41	46
 .facebook {
   background-color: rgb(68, 88, 151);
 }
+
 .rss {
   background-color: rgb(204, 143, 50);
 }
@@ -166,6 +174,7 @@ red for buttons: 180	41	46
   background-color: rgb(180, 41, 46);
   width: 24%;
   height: 40px;
+  line-height: 40px;
   vertical-align: center;
   text-align: center;
   /*
@@ -174,17 +183,17 @@ red for buttons: 180	41	46
   the values of the property control x-position, y-position, and the softness of the edge
   */
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+  transition: box-shadow .6s;
+  transition: letter-spacing .6s;
 }
 
-/*.menuBar--button:nth-child(2, 3, 4) {
-  margin-left: 1%;
-}*/
-
-.menuBar--button::before, .menuBar--button::after {
-  content: "-";
-  font-size: 3rem;
-  vertical-align: middle;
+.menuBar--button:hover {
+  box-shadow: 0px 4px 0px rgb(255, 203, 7);
+  transition: box-shadow .6s;
+  letter-spacing: 0.3rem;
+  transition: letter-spacing .6s;
 }
+
 
 .carousel__main {
   position: relative;
@@ -284,19 +293,33 @@ red for buttons: 180	41	46
   vertical-align: top;
   padding: 0 3%;
   overflow-x: none;
+  transition: box-shadow .6s;
 }
+
+.article:hover {
+  box-shadow: 0px 4px 0px rgb(181, 46, 41);
+  transition: box-shadow .6s;
+}
+
 
 .article:nth-child(even) {
   margin: 0 1%;
 }
 
+.article__title--link {
+  color: black;
+}
 
+.article__title--link:hover {
+  color: rgb(181, 46, 41);
+}
 
 .article__title {
   font-size: 1.5rem;
   font-weight: 400;
   position:relative;
   margin: 5% 0;
+  text-decoration: none;
 }
 
 .timestamp {
@@ -318,6 +341,12 @@ red for buttons: 180	41	46
   transform: translate(-50%, -50%);
   font-size: .8rem;
   font-weight: 600;
+  transition: letter-spacing .6s;
+}
+
+.readMore:hover {
+  letter-spacing: 0.3rem;
+  transition: letter-spacing .6s;
 }
 
 /* bio grid with pictures*/
@@ -334,6 +363,12 @@ red for buttons: 180	41	46
   width: 100%;
   height: 100%;
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+  transition: box-shadow .6s;
+}
+
+.bios__container:hover {
+  box-shadow: 0px 4px 0px rgb(181, 46, 41);
+  transition: box-shadow .6s;
 }
 
 /*.bios:nth-child(2,3) {
@@ -348,6 +383,7 @@ won't work because of html structure?
   display: inline-block;
   width: 100%;
   height: 100%;
+  transition: letter-spacing .6s;
 }
 
 .bios__heading {
@@ -358,11 +394,18 @@ won't work because of html structure?
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;
-  top: 0;
-  left: 0;
   transform: translate(-50%, -50%);
   margin: 0;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: tanslate(-50%, -50%)
+}
+
+.bios__link:hover {
+  letter-spacing: 0.5rem;
+  transition: letter-spacing .6s;
+  /*transition: letter-spacing .6s;*/
 }
 
 .lance {
@@ -371,6 +414,7 @@ won't work because of html structure?
   width: 32.67%;
   height: 49.5%;
   border: 5px solid rgb(227, 227, 227);
+  transition: letter-spacting .6s;
 }
 
 .lance:hover {
@@ -379,6 +423,7 @@ won't work because of html structure?
   background-position: 80% 20%;
   width: 32.67%;
   height: 49.5%;
+  transition: letter-spacting .6s;
 }
 
 .rodney {
@@ -402,6 +447,7 @@ won't work because of html structure?
   height: 101%;
   border: 5px solid rgb(227, 227, 227);
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+  transition: box-shadow .6s;
 }
 
 .tommy:hover {
@@ -410,6 +456,8 @@ won't work because of html structure?
   background-position: 78%;
   width: 32.67%;
   height: 101%;
+  box-shadow: 0px 4px 0px rgb(181, 46, 41);
+  transition: box-shadow .6s;
 }
 
 .steve {
@@ -429,13 +477,7 @@ won't work because of html structure?
   height: 49.5%;
 }
 
-.bios__heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: tanslate(-50%, -50%)
-  color: rgb (227, 227, 227);
-}
+
 
 .boards {
   display: inline-block;
@@ -446,8 +488,8 @@ won't work because of html structure?
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
   margin-top: 30px;
   padding-left: 45px;
-
 }
+
 
 .boards__images {
   position: relative;
@@ -605,10 +647,10 @@ won't work because of html structure?
   border:0 none;
   border-radius: 0px;
   float: right;
-  transition: border .6s;
+  transition: letter-spacing .6s;
 }
 
 .submit:hover {
-  border: solid 5px black;
-  transition: border .6s;
+  letter-spacing: 0.5rem;
+  transition: letter-spacing .6s;
 }
