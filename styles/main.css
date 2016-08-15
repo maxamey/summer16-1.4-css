@@ -472,7 +472,7 @@ won't work because of html structure?
   transition: box-shadow .6s;
 }
 
-.steve {
+. {
   background-image: url("../assets/sk8er-1.png");
   background-position: center;
   width: 66.4%;
