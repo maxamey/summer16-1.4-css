@@ -50,6 +50,10 @@ a {
   text-transform: uppercase;
 }
 
+.subscribe__link:hover {
+  letter-spacing: .3rem;
+}
+
 .subscribe__dot--1 {
   position: relative;
   display: inline-block;
@@ -76,7 +80,7 @@ a {
   border-radius: 50%;
 	width: 4px;
 	height: 4px;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .dots__stack:nth-child(1) {
@@ -88,8 +92,7 @@ a {
   width: 50%;
   position: relative;
   display: inline-block;
-  margin-left: 50%;
-  text-align: right;
+  vertical-align: top;
 }
 
 /*
@@ -129,7 +132,7 @@ red for buttons: 180	41	46
   margin-top: 9px;
   margin-left: 12px;
   text-align: center;
-  transform: translate(-30%, 10%);
+  transform: translate(8%, 10%);
 }
 
 .facebook--icon {
@@ -254,6 +257,12 @@ red for buttons: 180	41	46
 	width: 16px;
 	height: 16px;
   box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.5);
+  transition: box-shadow .6s;
+}
+
+.carousel__buttons--circle:hover {
+  box-shadow: 0px 4px 0px rgb(181, 46, 41);
+  transition: box-shadow .6s;
 }
 
 .innerDot {
@@ -267,9 +276,6 @@ red for buttons: 180	41	46
   transform: translate(50%, -55%);
 }
 
-.carousel__buttons--link {
-
-}
 
 /* article grid*/
 .grid__row {
@@ -333,7 +339,6 @@ red for buttons: 180	41	46
 }
 
 .readMore {
-  color: rgb(180, 41, 46);
   position: absolute;
   left: auto;
   left: 50%;
@@ -344,10 +349,17 @@ red for buttons: 180	41	46
   transition: letter-spacing .6s;
 }
 
+.readMore__link {
+  text-decoration: none;
+  color: rgb(180, 41, 46);
+}
+
 .readMore:hover {
   letter-spacing: 0.3rem;
   transition: letter-spacing .6s;
 }
+
+
 
 /* bio grid with pictures*/
 .bios {
@@ -488,6 +500,12 @@ won't work because of html structure?
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
   margin-top: 30px;
   padding-left: 45px;
+  transition: box-shadow .6s;
+}
+
+.boards:hover {
+  box-shadow: 0px 4px 0px rgb(181, 46, 41);
+  transition: box-shadow .6s;
 }
 
 
@@ -515,6 +533,12 @@ won't work because of html structure?
   padding-left: 38px;
   padding-right: 29px;
   margin-bottom: 36px;
+  transition: box-shadow .6s;
+}
+
+.footer__container:hover {
+  box-shadow: 0px 4px 0px rgb(181, 46, 41);
+  transition: box-shadow .6s;
 }
 
 .contactUs__container {
