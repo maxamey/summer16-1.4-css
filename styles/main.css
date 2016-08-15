@@ -21,7 +21,7 @@ a {
 
 .backgroundImage {
   /* http://stackoverflow.com/questions/26621513/darken-css-background-image */
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/bg.jpg");
   background-repeat: no-repeat;
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images ---- MUCH better than 100% as value */
   background-size: cover;
@@ -37,7 +37,7 @@ a {
 
 /* subscribe link */
 .subscribe {
-  display: inline-block;
+  display: inline;
   margin-left: 56%;
   vertical-align: top;
 }
@@ -65,10 +65,10 @@ a {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  margin-left: 96px;
+  margin-left: 60px;
 }
 
-/* Tried to use a flex bos to space out but dont fully understand how to use it yet. */
+/* Tried to use a flex box to space out but dont fully understand how to use it yet. */
 .dots__stack {
   position: relative;
   display: flex;
@@ -85,8 +85,11 @@ a {
 
 /* main social media navbar styling */
 .mediaBar {
+  width: 50%;
   position: relative;
   display: inline-block;
+  margin-left: 50%;
+  text-align: right;
 }
 
 /*
@@ -97,29 +100,37 @@ youtube color: 178	56	45
 red for buttons: 180	41	46
 */
 .socialMedia {
+  position: relative;
   display: inline-block;
-  height: 60px;
-  width: 60px;
-  margin: 0px,10px;
+  height: 4rem;
+  width: 4rem;
+  margin: 0px 0.2%;
   vertical-align: top;
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+}
+
+.socialMedia:nth-child(2,3) {
+  margin: 0 0.2%
 }
 
 /*styling for the social media icon images*/
 .img--size {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 60%;
+  height: 60%;
   opacity: 0.2;
   margin-top: 9px;
   margin-left: 12px;
   text-align: center;
+  transform: translate(-30%, 10%);
 }
 
 .facebook--icon {
-  width: 60px;
-  height: 60px;
+  position: relative;
+  width: 100%;
+  height: 100%;
   margin: 0px;
+  transform: translate(0, 0);
 }
 
 .facebook {
@@ -138,32 +149,41 @@ red for buttons: 180	41	46
 /* main navbar*/
 .menuBar {
   display: inline-block;
-  position: relative;
   margin-top: 86px;
   width: 100%;
-  height: 77px;
-  text-align: center;
+  height: 2rem;
+  font-size: 0;
 }
 /*main navbar buttons*/
+.menuBar .menuBar--button + .menuBar--button {
+  margin-left: 1.3%;
+}
 .menuBar--button {
+  font-size: 1.2rem;
   display: inline-block;
   color: white;
   text-transform: uppercase;
   background-color: rgb(180, 41, 46);
-  width: 248px;
+  width: 24%;
   height: 40px;
-  padding: 14px;
   vertical-align: center;
-  margin-top: 20px;
   text-align: center;
-
-
   /*
   found this at http://www.w3schools.com/cssref/css3_pr_box-shadow.asp
   adding a border with opacity showed the color of it's own element instead of being translucent to the background image
   the values of the property control x-position, y-position, and the softness of the edge
   */
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+}
+
+/*.menuBar--button:nth-child(2, 3, 4) {
+  margin-left: 1%;
+}*/
+
+.menuBar--button::before, .menuBar--button::after {
+  content: "-";
+  font-size: 3rem;
+  vertical-align: middle;
 }
 
 .carousel__main {
@@ -228,13 +248,14 @@ red for buttons: 180	41	46
 }
 
 .innerDot {
-  /* WARNING: didn't really know how to position this*/
+   /*didn't really know how to position this*/
   position: relative;
   display: inline-block;
   background-color: rgb(180, 41, 46);
   border-radius: 50%;
-	width: 6px;
-	height: 6px;
+	width: 50%;
+  height: 50%;
+  transform: translate(50%, -55%);
 }
 
 .carousel__buttons--link {
@@ -243,43 +264,60 @@ red for buttons: 180	41	46
 
 /* article grid*/
 .grid__row {
-
+  width: 100%;
+  font-size: 0;
+  position: relative;
+  overflow: none;
 }
 
 .grid__column {
-
+  position:relative;
 }
 
 .article {
   position: relative;
   display: inline-block;
   background-color: rgb(252, 252, 252);
-  width: 33%;
+  width: 32.65%;
   height: 350px;
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
   vertical-align: top;
-  padding: 22px;
-
+  padding: 0 3%;
+  overflow-x: none;
 }
 
+.article:nth-child(even) {
+  margin: 0 1%;
+}
+
+
+
 .article__title {
+  font-size: 1.5rem;
   font-weight: 400;
   position:relative;
-
+  margin: 5% 0;
 }
 
 .timestamp {
+  font-size: 1.3rem;
   color: rgb(173, 173, 173);
 }
 
 .article__preview {
-
+  font-size: 1rem;
+  line-height: 200%;
 }
 
 .readMore {
   color: rgb(180, 41, 46);
   position: absolute;
   left: auto;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, -50%);
+  font-size: .8rem;
+  font-weight: 600;
 }
 
 /* bio grid with pictures*/
@@ -287,63 +325,108 @@ red for buttons: 180	41	46
   display: inline-block;
   margin-top: 24px;
   width: 100%;
-}
-
-.bios__link {
-  position: relative;
-  padding-left: auto;
-  padding-right: auto;
+  height: 29.7rem;
+  font-size: 0;
 }
 
 .bios__container {
-  position: relative;
   display: inline-block;
   width: 100%;
+  height: 100%;
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
 }
 
-h3 {
+/*.bios:nth-child(2,3) {
+  margin-left: 1%;
+}
+won't work because of html structure?
+*/
+
+
+.bios__link {
+  position: relative;
   display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.bios__heading {
+  display: inline-block;
+  position: absolute;
   color: white;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;
-  margin: auto;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
 }
 
 .lance {
   background-image: url("../assets/sk8er-4.png");
   background-position: 80% 20%;
-  width: 334px;
-  height: 232px;
+  width: 32.67%;
+  height: 49.5%;
   border: 5px solid rgb(227, 227, 227);
-  text-align: center;
+}
+
+.lance:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/sk8er-4.png");
+  background-repeat: no-repeat;
+  background-position: 80% 20%;
+  width: 32.67%;
+  height: 49.5%;
 }
 
 .rodney {
   background-image: url("../assets/sk8er-3.png");
-  width: 33%;
-  height: 232px;
+  width: 32.67%;
+  height: 49.5%;
   border: 5px solid rgb(227, 227, 227);
+  margin-left: 1%;
+}
+
+.rodney:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/sk8er-3.png");
+  background-repeat: no-repeat;
 }
 
 .tommy {
   float: right;
   background-image: url("../assets/sk8er-2.png");
   background-position: 78%;
-  width: 336px;
-  height: 474px;
+  width: 32.67%;
+  height: 101%;
   border: 5px solid rgb(227, 227, 227);
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
+}
+
+.tommy:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/sk8er-2.png");
+  background-repeat: no-repeat;
+  background-position: 78%;
+  width: 32.67%;
+  height: 101%;
 }
 
 .steve {
   background-image: url("../assets/sk8er-1.png");
   background-position: center;
-  width: 678px;
-  height: 237px;
+  width: 66.4%;
+  height: 49.5%;
   border: 5px solid rgb(227, 227, 227);
+  margin-top: 1%
+}
+
+.steve:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../assets/sk8er-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 66.4%;
+  height: 49.5%;
 }
 
 .bios__heading {
@@ -408,8 +491,8 @@ h3 {
 
 .socialMedia__Footer {
   display: inline-block;
-  height: 31px;
-  width: 30px;
+  height: 3rem;
+  width: 3rem;
   margin: 0px,10px;
   vertical-align: top;
   box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5);
@@ -417,8 +500,8 @@ h3 {
 
 .img--sizeFooter {
   position: relative;
-  width: 15px;
-  height: 15px;
+  width: 60%;
+  height: 60%;
   opacity: 0.2;
   margin-top: 7px;
   margin-left: 8px;
@@ -426,25 +509,46 @@ h3 {
 }
 
 .facebookFooter--icon {
-  width: 31px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
   margin: 0px;
 }
 
 .facebookFooter {
   background-color: rgb(79,	79,	79)	;
+  transition: background-color .6s;
 }
 
 .rssFooter {
   background-color: rgb(174,	174, 174);
+  transition: background-color .6s;
 }
 
 .twitterFooter {
   background-color: rgb(122,	122,	122);
+  transition: background-color .6s;
 }
 
 .youtubeFooter {
   background-color: rgb(116,	116,	116);
+  transition: background-color .6s;
+}
+
+.facebookFooter:hover {
+  background-color: rgb(68, 88, 151);
+  transition: background-color .6s;
+}
+.rssFooter:hover {
+  background-color: rgb(204, 143, 50);
+  transition: background-color .6s;
+}
+.twitterFooter:hover {
+  background-color: rgb(106, 141, 199);
+  transition: background-color .6s;
+}
+.youtubeFooter:hover {
+  background-color: rgb(178, 56, 45);
+  transition: background-color .6s;
 }
 
 /*  Forms styling here*/
@@ -501,4 +605,10 @@ h3 {
   border:0 none;
   border-radius: 0px;
   float: right;
+  transition: border .6s;
+}
+
+.submit:hover {
+  border: solid 5px black;
+  transition: border .6s;
 }
